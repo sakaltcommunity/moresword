@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "3": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "4": {
+      "item": "minecraft:sponge"
+    },
+    "5": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "7": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "result": {
+    "item": "more_swords:guardian_core",
+    "count": 1
+  }
+}

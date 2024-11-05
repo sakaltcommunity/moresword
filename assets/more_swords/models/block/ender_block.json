@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_swords:blocks/enderblock",
+    "up": "more_swords:blocks/enderblock",
+    "north": "more_swords:blocks/enderblock",
+    "east": "more_swords:blocks/enderblock",
+    "south": "more_swords:blocks/enderblock",
+    "west": "more_swords:blocks/enderblock",
+    "particle": "more_swords:blocks/enderblock"
+  },
+  "render_type": "solid"
+}

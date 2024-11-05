@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:dragon_head"
+    },
+    "1": {
+      "item": "minecraft:dragon_egg"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "more_swords:dragon_sword",
+    "count": 1
+  }
+}

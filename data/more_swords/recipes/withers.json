@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:wither_rose"
+    },
+    "1": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "2": {
+      "item": "minecraft:wither_rose"
+    },
+    "3": {
+      "item": "minecraft:wither_rose"
+    },
+    "4": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "5": {
+      "item": "minecraft:wither_rose"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "more_swords:wither_sword",
+    "count": 1
+  }
+}
