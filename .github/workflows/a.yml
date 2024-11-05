@@ -33,4 +33,4 @@ jobs:
       - name: Push to Deploy Branch
         env:
           TOKEN: ${{ secrets.UPLOAD_TOKEN }}
-        run: git push -u https://x-access-token:${TOKEN}@github.com/${{ github.repository }} deploy-branch --force
+        run: git push -u https://x-access-token:${TOKEN}@github.com/${{ github.repository }} main --force
