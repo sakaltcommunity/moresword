@@ -16,7 +16,7 @@ jobs:
 
       # ZIPファイルの解凍
       - name: Unzip File
-        run: unzip -o path/to/yourfile.zip -d extracted_files
+        run: unzip -o MoreSwordsMOD.zip -d extracted_files
 
       # デプロイ用のブランチをチェックアウト
       - name: Switch to Deploy Branch
