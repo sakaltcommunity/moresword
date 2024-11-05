@@ -3,37 +3,34 @@ name: Unzip and Deploy to Branch
 on:
   push:
     branches:
-      - main  # メインブランチにプッシュされた時に実行
+      - main
 
 jobs:
   unzip_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # リポジトリのコードをチェックアウト
       - name: Check out repository
         uses: actions/checkout@v3
 
-      # ZIPファイルの解凍
       - name: Unzip File
-        run: unzip -o MoreSwordsMOD.zip -d extracted_files
+        run: |
+          unzip -o MoreSwordsMOD.zip -d extracted_files
+          ls -l extracted_files  # 展開されたファイルのリストを表示
 
-      # デプロイ用のブランチをチェックアウト
       - name: Switch to Deploy Branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B deploy-branch
 
-      # 解凍したファイルをステージしてコミット
       - name: Add and Commit Changes
         run: |
           cp -r extracted_files/* .
           git add .
-          git commit -m "Deploy ZIP content"
+          git commit -m "Deploy ZIP content" || echo "No changes to commit"
 
-      # デプロイブランチにプッシュ
       - name: Push to Deploy Branch
         env:
-          TOKEN: ${{ secrets.UPLOAD_TOKEN }}  # `UPLOAD_TOKEN` はリポジトリのシークレットで設定する
+          TOKEN: ${{ secrets.UPLOAD_TOKEN }}
         run: git push -u https://x-access-token:${TOKEN}@github.com/${{ github.repository }} deploy-branch --force
